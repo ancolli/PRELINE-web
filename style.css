@@ -65,6 +65,24 @@ nav a {
 }
 
 /* =========================
+   RESPONSIVE - hero
+========================= */
+
+@media (max-width: 768px) {
+
+.hero {
+flex-direction: column;
+text-align: center;
+}
+
+.logo-left,
+.logo-right {
+margin: 10px 0;
+}
+
+}
+
+/* =========================
    SECCION INICIO
 ========================= */
 
@@ -229,7 +247,7 @@ nav a {
   box-shadow:0 8px 25px rgba(0,0,0,0.08);
   transition:transform .25s ease, box-shadow .25s ease;
   text-align:center;
-  height:100%;
+  height:auto; /* cambiar de 100% a auto para evitar solapamiento */
 }
 
 .integrante-card:hover{
@@ -298,6 +316,39 @@ nav a {
 }
 
 /* =========================
+   RESPONSIVE - integrantes
+========================= */
+
+/* Tablets */
+@media (max-width: 900px){
+  .integrantes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px){
+  .integrantes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .integrante-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .section-title{
+    font-size:1.8rem;
+  }
+
+  .integrante-info h3{
+    font-size:1.1rem;
+  }
+}
+
+
+
+/* =========================
    MAPA
 ========================= */
 
@@ -364,23 +415,7 @@ margin:0 20px 10px 20px;
 font-weight:600;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
-@media (max-width: 768px) {
-
-.hero {
-flex-direction: column;
-text-align: center;
-}
-
-.logo-left,
-.logo-right {
-margin: 10px 0;
-}
-
-}
 /* =========================
    IDIOMA
 ========================= */
