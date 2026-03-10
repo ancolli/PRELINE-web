@@ -206,14 +206,15 @@ margin: 10px 0;
 }
 
 .tab-content {
-  display: none;
+  max-height: 0;           /* Antes estaba display: none */
   opacity: 0;
+  overflow: hidden;
   transform: translateY(10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 
 .tab-content.active {
-  display: block;
+  max-height: 2000px;      /* Ajusta según el contenido más largo */
   opacity: 1;
   transform: translateY(0);
 }
