@@ -1,8 +1,24 @@
+/* =========================
+   ESTILO GENERAL
+========================= */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #f0f2f5;
 }
+
+section {
+  padding: 50px 40px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 
 nav {
   background-color: #003366;
@@ -17,15 +33,9 @@ nav a {
   font-weight: bold;
 }
 
-section {
-  padding: 50px 40px;
-}
-
-h2 {
-  text-align: center;
-}
-
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   background-color: #0055a5;
@@ -54,7 +64,17 @@ h2 {
   margin-left: 20px;
 }
 
-/* GRID DE TARJETAS */
+/* =========================
+   SECCION INICIO
+========================= */
+
+#inicio {
+  background-color: #e9eef5;
+}
+
+/* =========================
+   CARDS GENERALES
+========================= */
 
 .cards {
   display: grid;
@@ -62,8 +82,6 @@ h2 {
   gap: 25px;
   margin-top: 30px;
 }
-
-/* TARJETAS */
 
 .card {
   background-color: #ffffff;
@@ -83,53 +101,33 @@ h2 {
   box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
 }
 
-/* TARJETA GRANDE */
+/* CARD GRANDE */
 
 .card.large {
   max-width: 900px;
   margin: 20px auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 6px;
-  border-top: 4px solid #0055a5;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
+  background: #f0f4f8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* SECCION INICIO */
-
-#inicio {
-  background-color: #e9eef5;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .logo-left,
-  .logo-right {
-    margin: 10px 0;
-  }
-}
-
-/* Que no se vea el link azul */
+/* Evitar link azul en cards */
 
 .card-link {
   text-decoration: none;
   color: inherit;
 }
 
-
-/* historia PRELINE */
+/* =========================
+   TIMELINE HISTORIA
+========================= */
 
 .timeline {
   position: relative;
   margin: 2rem 0;
   padding-left: 40px;
-  border-left: 3px solid #0077b6; /* Línea de tiempo */
+  border-left: 3px solid #0077b6;
 }
 
 .timeline-item {
@@ -152,7 +150,10 @@ h2 {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Contenedor de pestañas */
+/* =========================
+   TABS
+========================= */
+
 .tabs {
   position: relative;
   display: flex;
@@ -160,7 +161,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Botones de pestañas */
 .tab-button {
   padding: 12px 25px;
   background: none;
@@ -180,7 +180,6 @@ h2 {
   color: #0077b6;
 }
 
-/* Indicador animado */
 .tab-indicator {
   position: absolute;
   bottom: 0;
@@ -190,7 +189,6 @@ h2 {
   transition: left 0.3s, width 0.3s;
 }
 
-/* Contenido de pestañas */
 .tab-content {
   display: none;
   opacity: 0;
@@ -204,15 +202,10 @@ h2 {
   transform: translateY(0);
 }
 
-/* Card general */
-.card.large {
-  background: #f0f4f8;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+/* =========================
+   INTEGRANTES
+========================= */
 
-/* Card integrantes */
 #integrantes {
   padding: 60px 20px;
   max-width: 1200px;
@@ -225,15 +218,11 @@ h2 {
   margin-bottom:50px;
 }
 
-/* GRID */
-
 .integrantes-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:35px;
 }
-
-/* CARD */
 
 .integrante-card{
   background:white;
@@ -241,15 +230,12 @@ h2 {
   overflow:hidden;
   box-shadow:0 8px 25px rgba(0,0,0,0.08);
   transition:all .25s ease;
+  text-align:center;
 }
 
 .integrante-card:hover{
   transform:translateY(-6px);
   box-shadow:0 14px 35px rgba(0,0,0,0.12);
-}
-
-.integrante-card{
-  text-align:center;
 }
 
 .integrante-card img{
@@ -260,8 +246,6 @@ h2 {
   margin:20px auto 10px auto;
   display:block;
 }
-
-/* INFO */
 
 .integrante-info{
   padding:15px 22px 25px 22px;
@@ -292,12 +276,11 @@ h2 {
   text-decoration:none;
 }
 
-/* LINKS */
-
 .links{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
+  justify-content:center;
 }
 
 .links a{
@@ -315,7 +298,9 @@ h2 {
   color:white;
 }
 
-/* Mapa */
+/* =========================
+   MAPA
+========================= */
 
 .mapa{
   margin-top:15px;
@@ -325,7 +310,9 @@ h2 {
   border-radius:10px;
 }
 
-/* Equipamiento */
+/* =========================
+   EQUIPAMIENTO
+========================= */
 
 .cards{
 display:grid;
@@ -376,4 +363,22 @@ font-size:14px;
 color:#2c6fa3;
 margin:0 20px 10px 20px;
 font-weight:600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-left,
+  .logo-right {
+    margin: 10px 0;
+  }
+
 }
