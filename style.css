@@ -432,6 +432,53 @@ font-weight:600;
 }
 
 
+
+
+
+/* =========================
+   Desarrollo tecnologico
+========================= */
+
+
+#clientes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.trabajo {
+  background: #ffffff;
+  border-left: 4px solid #2c6ed5;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trabajo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.trabajo h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #1d3557;
+}
+
+.trabajo p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.trabajo strong {
+  color: #000;
+}
+
+
+
+
 /* =========================
    IDIOMA
 ========================= */
